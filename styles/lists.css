@@ -1,0 +1,41 @@
+.colorPallete {
+  color: #f04720 #f4c273 #f7e8c4 #dd9bc6 #9f4282;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap");
+
+h1,
+h2 {
+  text-align: center;
+  font-family: "Chango", cursive;
+}
+
+h1 {
+  margin-bottom: 0px;
+  color: #9f4282;
+}
+
+h2 {
+  margin-top: 0px;
+  color: #dd9bc6;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+ul,
+ol {
+  background-color: #f4c273;
+  margin: auto;
+  width: 70%;
+  border-radius: 25px;
+  padding: 40px;
+  font-size: 1.2rem;
+  font-family: "Dosis", sans-serif;
+}
+
+li {
+  padding: 5px;
+}

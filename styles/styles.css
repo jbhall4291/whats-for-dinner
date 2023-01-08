@@ -1,0 +1,233 @@
+.colorPallete {
+  color: #f04720 #f4c273 #f7e8c4 #dd9bc6 #9f4282;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap");
+
+body {
+  background-color: #f7e8c4;
+  padding-top: 0px;
+}
+
+.titleDiv {
+  width: auto;
+  color: #dd9bc6;
+  text-shadow: #9f4282 0px 6px;
+  font-family: Chango, cursive;
+  font-size: 4.8rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+  .titleDiv {
+    text-shadow: #9f4282 0px 5px;
+  }
+}
+
+.whatsFor {
+  height: 50px;
+}
+
+.dinner {
+  font-size: 8.2rem;
+}
+
+@media (max-width: 500px) {
+  .whatsFor {
+    height: 25px;
+    font-size: 2.5rem;
+  }
+
+  .dinner {
+    font-size: 4.2rem;
+  }
+}
+
+.flip-card {
+  margin: 40px auto;
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  font-family: "Dosis", sans-serif;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 25px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #f4c273;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+.rearCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "basket recipe"
+    "basketText recipeText";
+  width: 80%;
+  height: 50%;
+  margin: auto;
+}
+
+.result {
+  margin-bottom: 5px;
+  font-size: 3.5rem;
+  color: #9f4282;
+}
+
+.mealTagline {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 60px;
+  color: #9f4282;
+}
+
+@media (max-width: 500px) {
+  .mealTagline {
+    margin-bottom: 25px;
+  }
+}
+
+a {
+  color: #9f4282;
+  text-decoration: none;
+}
+
+i {
+  color: #f7e8c4;
+  text-shadow: #9f4282 0px 6px;
+  margin-bottom: 10px;
+}
+
+.recipe {
+  grid-area: recipe;
+  align-self: center;
+}
+
+.basketText {
+  grid-area: basketText;
+}
+
+.recipeText {
+  grid-area: recipeText;
+}
+
+.basket {
+  grid-area: basket;
+  align-self: center;
+}
+
+img,
+.growCard {
+  transition-duration: 300ms;
+  border-radius: 25px;
+  width: 400px;
+  height: 400px;
+}
+
+.grow {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 50px 0px #9f4282;
+}
+
+@media (max-width: 500px) {
+  .grow {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 500px) {
+  .flip-card {
+    margin: 50px auto 80px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+  }
+
+  img {
+    transition-duration: 300ms;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* button styling */
+
+.btn {
+  text-align: center;
+  font-family: Chango, cursive;
+
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  margin: auto;
+  background: #dd9bc6;
+  border-radius: 25px;
+  color: #9f4282;
+  font-size: 25px;
+  padding: 15px 0px;
+  text-decoration: none;
+  box-shadow: 0px 5px #9f4282;
+}
+
+@media (min-width: 500px) {
+  .btn:hover {
+    color: #dd9bc6;
+    background: #f04720;
+    box-shadow: 0px 5px #752311;
+    text-decoration: none;
+  }
+}
+
+.btnHide {
+  display: none;
+}
+
+/* on ios the hover psuedo-class seems to get 'stuck' on, so only use for desktop*/
+@media (max-width: 500px) {
+  .btn {
+    font-size: 1.2rem;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
